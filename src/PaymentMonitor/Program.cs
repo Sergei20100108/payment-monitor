@@ -30,7 +30,7 @@ namespace PaymentMonitor
             Application.ThreadException += delegate (object s, System.Threading.ThreadExceptionEventArgs e)
             {
                 LogCrash(e.Exception);
-                MessageBox.Show("Непредвиденная ошибка:\r\n\r\n" + e.Exception.Message +
+                MessageBox.Show("Неизвестная ошибка:\r\n\r\n" + e.Exception.Message +
                     "\r\n\r\nПодробности: logs\\crash.txt", "PaymentMonitor",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             };
