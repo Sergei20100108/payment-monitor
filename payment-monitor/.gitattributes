@@ -1,0 +1,21 @@
+# Автоопределение типов файлов и нормализация переводов строк
+* text=auto
+
+# Скрипты и исходники — LF
+*.cs    text eol=lf
+*.csproj text eol=lf
+*.py    text eol=lf
+*.md    text eol=lf
+*.json  text eol=lf
+*.xml   text eol=lf
+
+# Бинарные файлы
+*.xlsx  binary
+*.png   binary
+*.dll   binary
+*.exe   binary
+*.db    binary
+
+# Diff для бинарных файлов не нужен
+*.xlsx -diff
+*.db   -diff

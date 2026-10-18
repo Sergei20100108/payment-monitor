@@ -1,0 +1,11 @@
+bin/
+obj/
+logs/
+screenshot.png
+*.user
+*.suo
+.vs/
+settings.xml
+payments.db
+payments.db-wal
+payments.db-shm

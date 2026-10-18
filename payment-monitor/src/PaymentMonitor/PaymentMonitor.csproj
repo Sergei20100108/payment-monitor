@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net472</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <LangVersion>7.3</LangVersion>
+    <RootNamespace>PaymentMonitor</RootNamespace>
+    <AssemblyName>PaymentMonitor</AssemblyName>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <GenerateAssemblyInfo>true</GenerateAssemblyInfo>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- EPPlus 4.x — MIT-лицензия, чтение xlsx без Excel -->
+    <PackageReference Include="EPPlus" Version="4.*" />
+    <!-- SQLite (managed + native interop) -->
+    <PackageReference Include="System.Data.SQLite.Core" Version="1.*" />
+  </ItemGroup>
+
+</Project>
