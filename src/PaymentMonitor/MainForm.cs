@@ -9,11 +9,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using PaymentMonitor.Core;
+using PaymentMonitor.Ui;
 
 namespace PaymentMonitor
 {
     /// <summary>Главное окно: импорт выписок, мониторинг папки, таблица платежей, история, журнал.</summary>
-    public sealed class MainForm : Form
+    public sealed class MainForm : ChromeForm
     {
         private AppSettings _settings;
         private string _dbPath;
@@ -112,7 +113,7 @@ namespace PaymentMonitor
             BuildStatusStrip();
             root.Controls.Add(_statusStrip, 0, 2);
 
-            Controls.Add(root);
+            Content.Controls.Add(root);
 
             // таймер мониторинга папки
             _watchTimer.Tick += WatchTick;

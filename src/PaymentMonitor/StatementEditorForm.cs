@@ -5,6 +5,7 @@ using System.Globalization;
 using System.IO;
 using System.Windows.Forms;
 using PaymentMonitor.Core;
+using PaymentMonitor.Ui;
 
 namespace PaymentMonitor
 {
@@ -12,7 +13,7 @@ namespace PaymentMonitor
     /// Окно «Редактор выписки»: показывает таблицу выбранного xlsx и позволяет
     /// менять данные (статус, сумму, дату, назначение и т.д.), сохраняя их в тот же файл.
     /// </summary>
-    public sealed class StatementEditorForm : Form
+    public sealed class StatementEditorForm : ChromeForm
     {
         private readonly StatementDocument _doc;
         private bool _loading;
@@ -159,7 +160,7 @@ namespace PaymentMonitor
             root.Controls.Add(row2, 0, 1);
             root.Controls.Add(_grid, 0, 2);
             root.Controls.Add(_statusStrip, 0, 3);
-            Controls.Add(root);
+            Content.Controls.Add(root);
 
             AttachHandlers();
         }
